@@ -9,10 +9,13 @@ import { AppNavContainer } from "./src/navigations";
 import { LogBox } from "react-native";
 LogBox.ignoreLogs(['Reanimated 2']);
 
+import { GlobalProvider } from "./src/contexts/Provider";
+
 const App = () => {
     return (
-        <AppNavContainer>
-        </AppNavContainer>
+        <GlobalProvider>
+            <AppNavContainer />
+        </GlobalProvider>
     );
 };
 
