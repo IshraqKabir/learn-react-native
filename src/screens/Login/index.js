@@ -26,6 +26,7 @@ export const Login = () => {
                 setValue={setPassword}
                 icon={<Text>HIDE</Text>}
                 iconPosition="right"
+                secureTextEntry={true}
             />
 
         </Container>

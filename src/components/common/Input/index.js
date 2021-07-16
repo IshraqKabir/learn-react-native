@@ -3,7 +3,7 @@ import { TextInput, View, StyleSheet, Text } from "react-native";
 
 import { colors } from "../../../assets/themes/colors";
 
-export const Input = ({ label, icon, iconPosition, style, value, setValue, error }) => {
+export const Input = ({ label, icon, iconPosition, style, value, setValue, error, ...props }) => {
     const [isFocused, setIsFocused] = useState(false);
 
     const getFlexDirection = () => {
@@ -49,6 +49,7 @@ export const Input = ({ label, icon, iconPosition, style, value, setValue, error
                     onChangeText={(text) => setValue(text)}
                     onFocus={() => setIsFocused(true)}
                     onBlur={() => setIsFocused(false)}
+                    {...props}
                 />
             </View>
 
